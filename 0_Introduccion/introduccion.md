@@ -42,10 +42,10 @@
   2. <strong>🌐 Conexión a Internet</strong>: Esencial para colaborar, acceder a recursos y gestionar proyectos en la nube.
 </p>
 <p class="fragment" data-fragment-index="3" style="text-align: left;">
-  3. <strong>☁️ Servidor con MySQL en la nube</strong>: Un entorno de base de datos accesible y escalable para alojar proyectos.
+  3. <strong>☁️ Servidor con PostgreSQL en la nube</strong>: Un entorno de base de datos accesible y escalable para alojar proyectos.
 </p>
 <p class="fragment" data-fragment-index="4" style="text-align: left;">
-  4. <strong>💻 MySQL Workbench</strong>: Herramienta para diseñar, modelar y gestionar bases de datos.
+  4. <strong>💻 PgAdmin</strong>: Herramienta para diseñar, modelar y gestionar bases de datos.
 </p>
 <p class="fragment" data-fragment-index="5" style="text-align: left;">
   5. <strong>🌐 GitHub</strong>: Plataforma para compartir, colaborar y versionar proyectos.
