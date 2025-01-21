@@ -179,5 +179,3 @@ Reveal.initialize({
 });
 ```
 provides a generic class that can be used be providing an arbitrary initialization function.
-
-
