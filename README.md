@@ -1,4 +1,4 @@
-# Presentación en linea de las clases de MySQL
+# Presentación en linea de las clases de PostgreSQL
 
 >[!NOTE]
 > Usando como librería: [reveal.js-plugins](https://github.com/rajgoel/reveal.js-plugins)
