@@ -58,11 +58,11 @@
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
   1. <strong>🔢 Datos Numéricos</strong>:
-  - *INTEGER*: Para números enteros (id, cantidad, edad).
-  - *NUMERIC(10,2)*: Para valores monetarios o con precisión exacta (precio, salario).
-  - *SMALLINT*: Para números enteros pequeños (por ejemplo, edades).
-  - *REAL*: Para números decimales sin precisión exacta.
-  - *BIGINT*: Para números enteros grandes (transacciones, conteos masivos).
+  - INTEGER: Para números enteros (id, cantidad, edad).
+  - NUMERIC(10,2): Para valores monetarios o con precisión exacta (precio, salario).
+  - SMALLINT: Para números enteros pequeños (por ejemplo, edades).
+  - REAL: Para números decimales sin precisión exacta.
+  - BIGINT: Para números enteros grandes (transacciones, conteos masivos).
 </p>
 
 <p class="fragment" data-fragment-index="2" style="text-align: left;">
