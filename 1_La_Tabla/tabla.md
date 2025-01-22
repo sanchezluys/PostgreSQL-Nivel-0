@@ -31,10 +31,10 @@
 ### 📝 Nombre de la columna
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
-  1. <strong>📝 Usar snake_case</strong>: Escribe todos los nombres en minúsculas usando guiones bajos para separar palabras. Por ejemplo:
-  - fecha_nacimiento (✅ correcto)
-  - fechaNacimiento (❌ incorrecto)
-  - FECHA_NACIMIENTO (❌ incorrecto)
+1. <strong>📝 Usar snake_case</strong>: Escribe todos los nombres en minúsculas usando guiones bajos para separar palabras. Por ejemplo:
+- fecha_nacimiento (✅ correcto)
+- fechaNacimiento (❌ incorrecto)
+- FECHA_NACIMIENTO (❌ incorrecto)
 </p>
 
 <p class="fragment" data-fragment-index="2" style="text-align: left;">
