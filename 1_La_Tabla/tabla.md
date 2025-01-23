@@ -102,13 +102,13 @@
   - Tipo: INTEGER o BIGINT.
   - Propiedades: NOT NULL + GENERATED ALWAYS AS IDENTITY.
   - Ejemplo: 
-    ```sql
+    <code>
     id SERIAL PRIMARY KEY
-    ```
+    </code>
     O bien, usando la opción recomendada:
-    ```sql
+    <code>
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-    ```
+    </code>
 </p>
 
 <p class="fragment" data-fragment-index="2" style="text-align: left;">
