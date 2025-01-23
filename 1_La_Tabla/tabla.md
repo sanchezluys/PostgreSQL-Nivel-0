@@ -54,7 +54,7 @@
 
 ---
 
-### 🔢 Tipos de Datos
+### 🔢 Tipos de Datos 1/2
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
   1. <strong>🔢 Datos Numéricos</strong>:
@@ -71,6 +71,11 @@
   - TEXT: Textos largos o ilimitados (descripción, contenido).
   - ENUM: Valores predefinidos (estado, tipo) mediante dominios o tipos personalizados en PostgreSQL.
 </p>
+
+---
+
+### 🔢 Tipos de Datos 2/2
+
 <p class="fragment" data-fragment-index="3" style="text-align: left;">
   3. <strong>📅 Datos de Fecha/Hora</strong>:
   - DATE: fecha (fecha_nacimiento).
