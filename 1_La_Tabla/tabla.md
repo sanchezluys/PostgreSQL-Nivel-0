@@ -54,37 +54,34 @@
 
 ---
 
-### 🔢 Tipo de Dato
+### 🔢 Tipos de Datos
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
   1. <strong>🔢 Datos Numéricos</strong>:
-  - INTEGER: Para números enteros (id, cantidad, edad).
-  - NUMERIC(10,2): Para valores monetarios o con precisión exacta (precio, salario).
-  - SMALLINT: Para números enteros pequeños (por ejemplo, edades).
-  - REAL: Para números decimales sin precisión exacta.
-  - BIGINT: Para números enteros grandes (transacciones, conteos masivos).
+  - INTEGER: números enteros (id, cantidad, edad).
+  - NUMERIC(10,2): valores monetarios o con precisión exacta (precio, salario).
+  - SMALLINT: números enteros pequeños (edades).
+  - REAL: números decimales sin precisión exacta.
+  - BIGINT: números enteros grandes (transacciones, conteos masivos).
 </p>
-
 <p class="fragment" data-fragment-index="2" style="text-align: left;">
   2. <strong>📝 Datos de Texto</strong>:
   - VARCHAR(50): Textos cortos con longitud variable (nombre, email).
-  - CHAR(10): Textos con longitud fija (código_postal).
+  - CHAR(10): Textos longitud fija (código_postal).
   - TEXT: Textos largos o ilimitados (descripción, contenido).
   - ENUM: Valores predefinidos (estado, tipo) mediante dominios o tipos personalizados en PostgreSQL.
 </p>
-
 <p class="fragment" data-fragment-index="3" style="text-align: left;">
   3. <strong>📅 Datos de Fecha/Hora</strong>:
-  - DATE: Solo fecha (fecha_nacimiento).
-  - TIME: Solo hora (hora_entrada).
+  - DATE: fecha (fecha_nacimiento).
+  - TIME: hora (hora_entrada).
   - TIMESTAMP: Fecha y hora sin zona horaria (fecha_creacion).
   - TIMESTAMPTZ: Fecha y hora con zona horaria (ultima_actualizacion).
 </p>
-
 <p class="fragment" data-fragment-index="4" style="text-align: left;">
   4. <strong>🎯 Datos Especiales</strong>:
   - BYTEA: Datos binarios (imagen, archivo).
-  - JSON/JSONB: Datos en formato JSON, con JSONB optimizado para consultas (configuración).
+  - JSON/JSONB: Datos formato JSON, JSONB optimizado para consultas (configuración).
   - GEOGRAPHY/GEOMETRY: Datos geoespaciales mediante extensiones como PostGIS (ubicación).
   - UUID: Identificadores únicos universales (token).
   - ARRAY: Datos en formato de lista o conjunto (etiquetas, preferencias).
