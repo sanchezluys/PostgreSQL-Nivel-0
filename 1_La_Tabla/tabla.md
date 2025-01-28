@@ -162,9 +162,9 @@
 <p class="fragment" data-fragment-index="3" style="text-align: left;">
   3. <strong>💡 Mejores Prácticas</strong>:
   - Usar valores por defecto: para evitar nulos innecesarios, por ejemplo:
-    ```sql
+    <code>
     estado_pedido VARCHAR(20) NOT NULL DEFAULT 'pendiente'
-    ```
+    </code>
   - Documentar por qué se permite NULL: para mantener claridad en el diseño.
   - Considerar el impacto en consultas: usar IS NULL o IS NOT NULL puede ser costoso en ciertas circunstancias.
   - Evitar NULL en campos de cálculos: manejar valores predeterminados para evitar resultados inesperados.
@@ -173,7 +173,7 @@
 
 ---
 
-### 🎯 UQ - Valor Único
+### 🎯 UQ - Valor Único 1/2
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
   1. <strong>🎯 Cuándo usar UNIQUE</strong>:
@@ -204,6 +204,10 @@
     );
     </code>
 </p>
+
+---
+
+### 🎯 UQ - Valor Único 2/2
 
 <p class="fragment" data-fragment-index="3" style="text-align: left;">
   3. <strong>⚡ Mejores Prácticas</strong>:
