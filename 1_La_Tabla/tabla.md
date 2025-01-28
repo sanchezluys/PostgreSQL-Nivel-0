@@ -219,11 +219,6 @@
     CHECK (email = LOWER(email))
     </code>
   - Evaluar necesidad real de unicidad para evitar restricciones innecesarias que puedan afectar el rendimiento.
-  - Planificar gestión de duplicados: por ejemplo, utilizando restricciones `ON CONFLICT` al insertar datos duplicados:
-    <code>
-    INSERT INTO usuarios (email) VALUES ('test@example.com')
-    ON CONFLICT (email) DO NOTHING;
-    </code>
 </p>
 
 ---
