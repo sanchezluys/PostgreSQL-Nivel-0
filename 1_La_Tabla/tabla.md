@@ -223,7 +223,7 @@
 
 ---
 
-### ⚡ UN - Sin signo (UNSIGNED)
+### ⚡ UN - Sin signo (UNSIGNED) 1/2
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
   1. <strong>🎯 Cuándo simular UNSIGNED</strong>:
@@ -234,22 +234,26 @@
 <p class="fragment" data-fragment-index="2" style="text-align: left;">
   2. <strong>🔄 Cómo manejar enteros positivos en PostgreSQL</strong>:
   - Enteros con restricciones CHECK:
-    ```sql
+    <code>
     edad SMALLINT CHECK (edad >= 0)
-    ```
+    </code>
   - IDs o claves foráneas:
-    ```sql
+    <code>
     usuario_id BIGINT CHECK (usuario_id >= 0)
-    ```
+    </code>
   - PostgreSQL no soporta directamente `UNSIGNED`, pero se puede limitar el rango de valores a través de una combinación de tipo de datos y restricciones.
 </p>
+
+---
+
+### ⚡ UN - Sin signo (UNSIGNED) 2/2
 
 <p class="fragment" data-fragment-index="3" style="text-align: left;">
   3. <strong>⚡ Mejores Prácticas</strong>:
   - Usar restricciones CHECK para asegurar valores no negativos:
-    ```sql
+    <code>
     cantidad INTEGER CHECK (cantidad >= 0)
-    ```
+    </code>
   - Seleccionar tipos de datos adecuados según el rango esperado:
     - `SMALLINT`: -32,768 a 32,767.
     - `INTEGER`: -2,147,483,648 a 2,147,483,647.
@@ -260,50 +264,7 @@
 
 ---
 
-### 🕹️ ZF - Relleno con ceros (Zero Fill)
-
-<p class="fragment" data-fragment-index="1" style="text-align: left;">
-  1. <strong>🎯 Cuándo simular ZEROFILL</strong>:
-  - Códigos de productos o números de cuenta: para mantener una longitud fija con ceros a la izquierda.
-  - Identificadores con formato visual: donde los ceros iniciales son importantes para la presentación, pero no para el cálculo.
-</p>
-
-<p class="fragment" data-fragment-index="2" style="text-align: left;">
-  2. <strong>🔄 Cómo manejar ZEROFILL en PostgreSQL</strong>:
-  - Formato con ceros a la izquierda usando la función `LPAD`:
-    ```sql
-    SELECT LPAD(CAST(codigo_producto AS TEXT), 8, '0') AS codigo_formateado
-    FROM productos;
-    ```
-  - Guardar los valores como texto si el formato es esencial:
-    ```sql
-    codigo_producto CHAR(8)
-    ```
-  - Generar vistas formateadas para mantener los datos numéricos en la base pero con presentación de relleno:
-    ```sql
-    CREATE VIEW productos_formateados AS
-    SELECT 
-        LPAD(CAST(codigo_producto AS TEXT), 8, '0') AS codigo_producto_formateado,
-        nombre_producto
-    FROM productos;
-    ```
-</p>
-
-<p class="fragment" data-fragment-index="3" style="text-align: left;">
-  3. <strong>⚡ Mejores Prácticas</strong>:
-  - Almacenar el valor numérico real en la base de datos para facilitar cálculos.
-  - Aplicar el formato en la capa de presentación (consulta o aplicación) para mantener flexibilidad.
-  - Evitar guardar valores con ceros a la izquierda si no son estrictamente necesarios.
-  - Utilizar funciones como `LPAD` o `TO_CHAR` según el contexto:
-    ```sql
-    SELECT TO_CHAR(codigo_producto, 'FM00000000') AS codigo_formateado
-    FROM productos;
-    ```
-</p>
-
----
-
-### 📞 AI - Auto incremental
+### 📞 AI - Auto incremental 1/2
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
   1. <strong>🎯 Cuándo usar AUTO_INCREMENT</strong>:
@@ -314,40 +275,44 @@
 <p class="fragment" data-fragment-index="2" style="text-align: left;">
   2. <strong>🔄 Cómo manejar AUTO_INCREMENT en PostgreSQL</strong>:
   - Usar el tipo de datos `SERIAL` para enteros autoincrementales:
-    ```sql
+    <code>
     id SERIAL PRIMARY KEY
-    ```
+    </code>
   - Para rangos mayores, usar `BIGSERIAL`:
-    ```sql
+    <code>
     id BIGSERIAL PRIMARY KEY
-    ```
+    </code>
   - Crear una secuencia manualmente si necesitas más control:
-    ```sql
+    <code>
     CREATE SEQUENCE id_sequence START WITH 1 INCREMENT BY 1;
     CREATE TABLE ejemplo (
         id INT DEFAULT nextval('id_sequence'),
         nombre TEXT
     );
-    ```
+    </code>
   - Configurar el valor inicial y el incremento de una secuencia:
-    ```sql
+    <code>
     ALTER SEQUENCE id_sequence RESTART WITH 100;
-    ```
+    </code>
 </p>
+
+---
+
+### 📞 AI - Auto incremental 2/2
 
 <p class="fragment" data-fragment-index="3" style="text-align: left;">
   3. <strong>⚡ Mejores Prácticas</strong>:
   - Usar `SERIAL` o `BIGSERIAL` para la mayoría de los casos: simplifica la definición de columnas autoincrementales.
   - Definir la columna como clave primaria:
-    ```sql
+    <code>
     id SERIAL PRIMARY KEY
-    ```
+    </code>
   - Evitar el uso de autoincrementales para datos que necesitan personalización manual.
   - Gestionar las secuencias explícitamente si necesitas control avanzado, como reiniciar o modificar el valor inicial.
   - Considerar el uso de UUID si requieres identificadores únicos globales en lugar de valores numéricos secuenciales:
-    ```sql
+    <code>
     id UUID DEFAULT gen_random_uuid() PRIMARY KEY
-    ```
+    </code>
 </p>
 
 ---
