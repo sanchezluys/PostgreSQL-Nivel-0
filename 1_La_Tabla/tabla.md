@@ -363,7 +363,7 @@
 
 ---
 
-### 📉 Default/Expression Expresión o valor por defecto 1/2
+### 📉 Default o valor por defecto 1/2
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
   1. <strong>🎯 Cuándo usar DEFAULT o EXPRESSIONS</strong>:
@@ -396,7 +396,7 @@
 
 ---
 
-### 📉 Default/Expression Expresión o valor por defecto 2/2
+### 📉 Default o valor por defecto 2/2
 
 <p class="fragment" data-fragment-index="3" style="text-align: left;">
   3. <strong>⚡ Mejores Prácticas</strong>:
