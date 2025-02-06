@@ -171,6 +171,22 @@ SELECT * FROM productos WHERE nombre LIKE 'Cam%';
 
 ---
 
+---
+
+### FILTROS EN POSTGRESQL - WHERE + ILIKE 🔑
+
+- Coincidencia de patrones sin distinción entre mayúsculas y minúsculas.
+- Filtra registros basándose en patrones.
+- `%`: Coincide con cualquier cantidad de caracteres.
+- `_`: Coincide con un solo carácter.
+
+```sql
+-- Seleccionar productos cuyo nombre comience con 'Cam' (sin distinguir mayúsculas).
+SELECT * FROM productos WHERE nombre ILIKE 'Cam%';
+```
+
+---
+
 ### FILTROS EN MYSQL - WHERE + IS NULL / IS NOT NULL 🤘
 
 - Valores nulos
@@ -214,16 +230,18 @@ SELECT * FROM productos WHERE NOT precio BETWEEN 50 AND 100;
 
 ---
 
-### FILTROS EN MYSQL - WHERE + REGEX 🦊
+### FILTROS EN POSTGRESQL - WHERE + REGEX 🦊
 
 - Filtra registros basados en patrones más complejos.
+- `~` → Coincide con una expresión regular (sensible a mayúsculas).
+- `~*` → Coincide con una expresión regular (insensible a mayúsculas).
 
 ```sql
 -- Seleccionar productos cuyo nombre empiece con 'Cam' o 'Zap'
-SELECT * FROM productos WHERE nombre REGEXP '^Cam|Zap';
+SELECT * FROM productos WHERE nombre ~ '^(Cam|Zap)';
 ```
 
-===
+=== TODO:
 
 ### USO DE FUNCIONES 🧑‍🎄
 
