@@ -171,8 +171,6 @@ SELECT * FROM productos WHERE nombre LIKE 'Cam%';
 
 ---
 
----
-
 ### FILTROS EN POSTGRESQL - WHERE + ILIKE 🔑
 
 - Coincidencia de patrones sin distinción entre mayúsculas y minúsculas.
@@ -241,7 +239,9 @@ SELECT * FROM productos WHERE NOT precio BETWEEN 50 AND 100;
 SELECT * FROM productos WHERE nombre ~ '^(Cam|Zap)';
 ```
 
-=== TODO:
+=== 
+
+TODO:
 
 ### USO DE FUNCIONES 🧑‍🎄
 
