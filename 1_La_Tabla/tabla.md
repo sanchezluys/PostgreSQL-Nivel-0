@@ -317,7 +317,7 @@
 
 ---
 
-### 🏷️ G - Columna Generada
+### 🏷️ G - Columna Generada 1/2
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
   1. <strong>🎯 Cuándo usar COLUMNAS GENERADAS</strong>:
@@ -330,23 +330,27 @@
 <p class="fragment" data-fragment-index="2" style="text-align: left;">
   2. <strong>🔄 Cómo manejar COLUMNAS GENERADAS en PostgreSQL</strong>:
   - Columna generada almacenada (STORED): su valor se calcula y almacena físicamente en la tabla.
-    ```sql
+    <code>
     CREATE TABLE productos (
         id SERIAL PRIMARY KEY,
         precio DECIMAL(10, 2) NOT NULL,
         total_con_impuesto DECIMAL(10, 2) GENERATED ALWAYS AS (precio * 1.19) STORED
     );
-    ```
+    </code>
   - Ejemplo con concatenación:
-    ```sql
+    <code>
     CREATE TABLE personas (
         id SERIAL PRIMARY KEY,
         nombre VARCHAR(50),
         apellido VARCHAR(50),
         nombre_completo VARCHAR(100) GENERATED ALWAYS AS (nombre || ' ' || apellido) STORED
     );
-    ```
+    </code>
 </p>
+
+---
+
+### 🏷️ G - Columna Generada 2/2
 
 <p class="fragment" data-fragment-index="3" style="text-align: left;">
   3. <strong>⚡ Mejores Prácticas</strong>:
@@ -359,7 +363,7 @@
 
 ---
 
-### 📉 Default/Expression Expresión o valor por defecto
+### 📉 Default/Expression Expresión o valor por defecto 1/2
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
   1. <strong>🎯 Cuándo usar DEFAULT o EXPRESSIONS</strong>:
@@ -372,23 +376,27 @@
 <p class="fragment" data-fragment-index="2" style="text-align: left;">
   2. <strong>🔄 Cómo usar DEFAULT o EXPRESSIONS en PostgreSQL</strong>:
   - Valor por defecto simple: Asignar un valor fijo cuando no se proporciona un valor.
-    ```sql
+    <code>
     estado VARCHAR(20) DEFAULT 'pendiente'
-    ```
+    </code>
   - Expresión de función para valor dinámico: Usar funciones como `CURRENT_TIMESTAMP` para obtener un valor calculado automáticamente.
-    ```sql
+    <code>
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    ```
+    </code>
   - Otros ejemplos de expresiones:
     - Usar la fecha actual para la columna `fecha_baja`:
-      ```sql
+      <code>
       fecha_baja DATE DEFAULT CURRENT_DATE
-      ```
+      </code>
     - Usar una secuencia para el valor predeterminado de un ID:
-      ```sql
+      <code>
       id SERIAL PRIMARY KEY
-      ```
+      </code>
 </p>
+
+---
+
+### 📉 Default/Expression Expresión o valor por defecto 2/2
 
 <p class="fragment" data-fragment-index="3" style="text-align: left;">
   3. <strong>⚡ Mejores Prácticas</strong>:
