@@ -241,8 +241,6 @@ SELECT * FROM productos WHERE nombre ~ '^(Cam|Zap)';
 
 === 
 
-TODO:
-
 ### USO DE FUNCIONES 🧑‍🎄
 
 <img src="3_SQL_Consultas/fun_2.jpg" alt="funciones" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
@@ -255,12 +253,14 @@ TODO:
 
 ---
 
-### TIPOS DE FUNCIONES 📊 🧠
+### TIPOS DE FUNCIONES 📊 🧠  
 
-- **Numéricas**: ABS(), CEIL(), FLOOR(), ROUND() 🧮
-- **Manipulación** de cadenas: CONCAT(), CONCAT_WS(), LOWER() 📝
-- **Fechas** y Horas: NOW(), CURDATE(), DATE_FORMAT() 🕰️
-- **Lógicas** y Condicionales: IF(), CASE WHEN, COALESCE() 🤔
+- **Numéricas**: `ABS()`, `CEIL()`, `FLOOR()`, `ROUND()` 🧮  
+- **Manipulación** de cadenas: `CONCAT()`, `LOWER()`, `UPPER()`, `STRING_AGG()` 📝  
+- **Fechas** y Horas: `NOW()`, `CURRENT_DATE`, `TO_CHAR()`, `AGE()` 🕰️  
+- **Lógicas** y Condicionales: `CASE WHEN`, `COALESCE()`, `NULLIF()` 🤔  
+
+> 📌 **Nota:** PostgreSQL no tiene `CONCAT_WS()`, pero `STRING_AGG()` puede usarse en agregaciones. Tampoco tiene `IF()`, por lo que se usa `CASE WHEN`. `CURDATE()` se reemplaza por `CURRENT_DATE`.
 
 ---
 
