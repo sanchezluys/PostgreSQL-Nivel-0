@@ -264,14 +264,14 @@ SELECT * FROM productos WHERE nombre ~ '^(Cam|Zap)';
 
 ---
 
-### Funciones Numéricas 🧮
+### Funciones Numéricas 🧙‍♂️
 
-Las funciones numéricas en SQL nos permiten realizar operaciones matemáticas básicas y avanzadas. Algunas de las más comunes son:
+Las funciones numéricas en PostgreSQL nos permiten realizar operaciones matemáticas básicas y avanzadas. Algunas de las más comunes son:
 
 - `ABS(x)`: Devuelve el valor absoluto de un número.
 - `CEIL(x)`: Devuelve el siguiente entero más grande que el número dado.
 - `FLOOR(x)`: Devuelve el entero más grande que es menor o igual que el número dado.
-- `ROUND(x, [d])`: Redondea un número al número de decimales especificado. Si no se especifica d, se redondea al entero más cercano.
+- `ROUND(x, d)`: Redondea un número al número de decimales especificado. Si no se especifica `d`, se redondea al entero más cercano.
 
 Ejemplo:
 
@@ -280,30 +280,29 @@ SELECT
     ABS(-10.5) AS valor_absoluto,
     CEIL(3.14) AS techo,
     FLOOR(3.14) AS piso,
-    ROUND(3.14159, 2) AS redondeado
-FROM dual;
+    ROUND(3.14159, 2) AS redondeado;
 ```
 
 ---
 
 ### Funciones de Manipulación de Cadenas 📝
 
-Las funciones de manipulación de cadenas en SQL nos permiten trabajar con texto. Algunas de las más útiles son:
+Las funciones de manipulación de cadenas en PostgreSQL nos permiten trabajar con texto. Algunas de las más útiles son:
 
 - `CONCAT(str1, str2, ...)`: Concatena dos o más cadenas de texto.
-- `CONCAT_WS(separator, str1, str2, ...)`: Concatena dos o más cadenas de texto con un separador personalizado.
 - `LOWER(str)`: Convierte una cadena de texto a minúsculas.
+- `UPPER(str)`: Convierte una cadena de texto a mayúsculas.
+- `STRING_AGG(expression, delimiter)`: Concatena valores agrupados con un delimitador.
 
 Ejemplo:
 
 ```sql
 SELECT
     CONCAT('Hola', ', ', 'mundo') AS concatenado,
-    CONCAT_WS(' - ', 'Curso', 'de', 'SQL') AS concatenado_con_separador,
-    LOWER('SQL es GENIAL') AS texto_a_minusculas
-FROM dual;
+    STRING_AGG('Curso' || ' de ' || 'SQL', ' - ') AS concatenado_con_separador,
+    LOWER('SQL es GENIAL') AS texto_a_minusculas;
 ```
-
+TODO:
 ---
 
 ### Funciones de Fecha y Hora 🕰️
