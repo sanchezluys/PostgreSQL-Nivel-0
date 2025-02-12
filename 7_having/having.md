@@ -2,6 +2,10 @@
 
 <img src="7_having/having.png" alt="todos los joins" style="height: 800px; margin: 0 auto 4rem auto; background: white; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
+---
+
+### Having
+
 - Se utiliza para filtrar los resultados de las funciones de agregación (similar a **WHERE**, pero **HAVING** opera después de la agregación).
 - Las **funciones de agregación** son, por ejemplo, `COUNT()`, `SUM()`, `AVG()`, etc.
 - Es muy común su uso con **GROUP BY**, pero no es obligatorio que sea así.
@@ -15,6 +19,10 @@ Por ejemplo, si quieres contar la cantidad de ventas por producto, pero solo mos
 
 - Cuando necesites aplicar condiciones sobre los resultados de las funciones de agregación.
 - Útil para filtrar grupos basados en resultados agregados, que no podrías filtrar con **WHERE**.
+
+---
+
+### Having en PostgreSQL
 
 <img src="7_having/sql-having.png" alt="todos los joins" style="height: 800px; margin: 0 auto 4rem auto; background: white; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
