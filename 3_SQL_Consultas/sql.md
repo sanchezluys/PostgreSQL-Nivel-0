@@ -238,7 +238,7 @@ SELECT * FROM productos WHERE NOT precio BETWEEN 50 AND 100;
 SELECT * FROM productos WHERE nombre ~ '^(Cam|Zap)';
 ```
 
-=== 
+===
 
 ### USO DE FUNCIONES 🧑‍🎄
 
