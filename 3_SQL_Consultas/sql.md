@@ -306,45 +306,48 @@ SELECT
 
 ### Funciones de Fecha y Hora 🕰️
 
-Las funciones de fecha y hora en SQL nos permiten trabajar con información temporal. Algunas de las más comunes son:
+Las funciones de fecha y hora en PostgreSQL nos permiten trabajar con información temporal. Algunas de las más comunes son:
 
 - `NOW()`: Devuelve la fecha y hora actual.
-- `CURDATE()`: Devuelve la fecha actual.
-- `DATE_FORMAT(date, format)`: Formatea una fecha según un patrón especificado.
+- `CURRENT_DATE`: Devuelve la fecha actual.
+- `TO_CHAR(date, format)`: Formatea una fecha según un patrón especificado.
 
 Ejemplo:
 
 ```sql
 SELECT
     NOW() AS fecha_y_hora_actual,
-    CURDATE() AS fecha_actual,
-    DATE_FORMAT(NOW(), '%d/%m/%Y') AS formato_personalizado
-FROM dual;
+    CURRENT_DATE AS fecha_actual,
+    TO_CHAR(NOW(), 'DD/MM/YYYY') AS formato_personalizado;
 ```
 
 ---
 
 ### Funciones Lógicas y Condicionales 🤔
 
-Las funciones lógicas y condicionales en SQL nos permiten realizar operaciones basadas en condiciones. Algunas de las más útiles son:
+Las funciones lógicas y condicionales en SQL nos permiten realizar operaciones basadas en condiciones. Algunas de las más útiles en PostgreSQL son:
 
-- `IF(condition, true_value, false_value)`: Devuelve un valor si la condición es verdadera, y otro valor si es falsa.
-- `CASE WHEN condition THEN value END`: Evalúa una serie de condiciones y devuelve un valor correspondiente.
+- `CASE WHEN condition THEN value ELSE other_value END`: Evalúa una serie de condiciones y devuelve un valor correspondiente.
 - `COALESCE(value1, value2, ...)`: Devuelve el primer valor no nulo de la lista.
+- `NULLIF(value1, value2)`: Devuelve `NULL` si ambos valores son iguales; de lo contrario, devuelve `value1`.
 
 Ejemplo:
 
 ```sql
 SELECT
-    IF(10 > 5, 'Verdadero', 'Falso') AS resultado_if,
+    CASE 
+        WHEN 10 > 5 THEN 'Verdadero'
+        ELSE 'Falso'
+    END AS resultado_case,
     CASE 
         WHEN 3 > 1 THEN 'Mayor'
         WHEN 3 < 1 THEN 'Menor'
         ELSE 'Igual'
-    END AS resultado_case,
-    COALESCE(NULL, 'Valor por defecto', 'Otro valor') AS resultado_coalesce
-FROM dual;
+    END AS resultado_case_multiple,
+    COALESCE(NULL, 'Valor por defecto', 'Otro valor') AS resultado_coalesce,
+    NULLIF(5, 5) AS resultado_nullif;
 ```
+> No existe el IF en las columnas
 
 ===
 
@@ -390,12 +393,6 @@ SELECT * FROM var1, var2, var3, var4;
 <img src="3_SQL_Consultas/dato_null_1.png" alt="motores" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ===
-
-### Motores / Engine
-
-<img src="3_SQL_Consultas/motores_1.jpg" alt="motores" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
-
----
 
 ### Tipos de almacenamiento en PostgreSQL
 
