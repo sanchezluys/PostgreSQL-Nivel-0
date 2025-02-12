@@ -20,7 +20,7 @@ En PostgreSQL, los `JOIN` se utilizan para combinar filas de dos o más tablas b
 
 Devuelve solo las filas que tienen coincidencias en ambas tablas.
 
-<img src="5_Join/inner_join.png" alt="diagrama er" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="5_Join/inner_join.png" alt="diagrama er" style="height: 600px; margin: 0 auto 4rem auto; background: white; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ```sql
 SELECT empleados.nombre, departamentos.nombre AS departamento
@@ -34,7 +34,7 @@ INNER JOIN departamentos ON empleados.departamento_id = departamentos.id;
 
 Devuelve todas las filas de la tabla izquierda y las coincidencias de la tabla derecha. Si no hay coincidencia, devuelve NULL.
 
-<img src="5_Join/left_join.png" alt="diagrama er" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="5_Join/left_join.png" alt="diagrama er" style="height: 600px; margin: 0 auto 4rem auto; background: white; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ```sql
 SELECT empleados.nombre, departamentos.nombre AS departamento
@@ -48,7 +48,7 @@ LEFT JOIN departamentos ON empleados.departamento_id = departamentos.id;
 
 Devuelve todas las filas de la tabla derecha y las coincidencias de la tabla izquierda. Si no hay coincidencia, devuelve NULL.
 
-<img src="5_Join/right_join.png" alt="diagrama er" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="5_Join/right_join.png" alt="diagrama er" style="height: 600px; margin: 0 auto 4rem auto; background: white; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ```sql
 SELECT empleados.nombre, departamentos.nombre AS departamento
@@ -62,7 +62,7 @@ RIGHT JOIN departamentos ON empleados.departamento_id = departamentos.id;
 
 Devuelve todas las filas cuando hay una coincidencia en una de las tablas. Si no hay coincidencia, devuelve NULL.
 
-<img src="5_Join/full_join.png" alt="diagrama er" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="5_Join/full_join.png" alt="diagrama er" style="height: 600px; margin: 0 auto 4rem auto; background: white; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ```sql 
 SELECT empleados.nombre, departamentos.nombre AS departamento
@@ -76,7 +76,7 @@ FULL JOIN departamentos ON empleados.departamento_id = departamentos.id;
 
 Devuelve el producto cartesiano de las filas de las tablas involucradas.
 
-<img src="5_Join/cross_join.png" alt="diagrama er" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="5_Join/cross_join.png" alt="diagrama er" style="height: 600px; margin: 0 auto 4rem auto; background: white; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ```sql
 SELECT empleados.nombre, departamentos.nombre AS departamento
