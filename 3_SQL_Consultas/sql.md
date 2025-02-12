@@ -109,7 +109,6 @@ SELECT * FROM productos WHERE precio = 100;
 
 ---
 
-
 ### FILTROS EN MYSQL - WHERE + != ✅
 
 - Diferente `<>`, `!=`
@@ -228,7 +227,7 @@ SELECT * FROM productos WHERE NOT precio BETWEEN 50 AND 100;
 
 ---
 
-### FILTROS EN POSTGRESQL - WHERE + REGEX 🦊
+### FILTROS EN POSTGRESQL - WHERE + REGEXP 🦊
 
 - Filtra registros basados en patrones más complejos.
 - `~` → Coincide con una expresión regular (sensible a mayúsculas).
@@ -302,7 +301,7 @@ SELECT
     STRING_AGG('Curso' || ' de ' || 'SQL', ' - ') AS concatenado_con_separador,
     LOWER('SQL es GENIAL') AS texto_a_minusculas;
 ```
-TODO:
+
 ---
 
 ### Funciones de Fecha y Hora 🕰️
@@ -355,33 +354,33 @@ FROM dual;
 
 ---
 
-### Creando Variables en MySQL 🤔
+### Creando Variables con `WITH` en PostgreSQL 🤔
 
-- Las variables se declaran con la palabra reservada: `SET`
-- El nombre de la variable debe tener de prefijo el arroba `@`
-- Se pueden crear varias variables a la vez separando por comas
-- Se les debe asignar un valor al crearlas.
+- Las variables se pueden declarar temporalmente utilizando una **CTE (Common Table Expression)** con la cláusula `WITH`.
+- No es necesario el prefijo `@`, y las variables pueden usarse en la misma consulta.
+- Se pueden definir múltiples "variables" a la vez dentro de la misma cláusula `WITH`.
 
 Ejemplo:
 
 ```sql
-SET @VAR1=1,
-    @VAR2="LUIS",
-    @VAR3=TRUE,
-    @VAR4="12-05-24";
-```
+WITH 
+    var1 AS (SELECT 1),
+    var2 AS (SELECT 'LUIS'),
+    var3 AS (SELECT TRUE),
+    var4 AS (SELECT '2024-05-12'::DATE)
+SELECT * FROM var1, var2, var3, var4;
 
 ---
 
-### Utilidad de las variables en MySQL 🤔
+### Utilidad de las variables en PostgreSQL 🤔  
 
-- 🚀 Mejora el rendimiento de las consultas
-- 🧩 Facilita operaciones complejas
-- 🔄 Reutilización de valores
-- 🔧 Control de flujo en procedimientos almacenados
-- 📚 Mayor legibilidad y mantenimiento
-- ⚠️ Evita errores de repetición
-- ⚡ Optimización de subconsultas
+- 🚀 **Mejora el rendimiento de las consultas**: Almacena resultados intermedios en variables para evitar cálculos repetidos.
+- 🧩 **Facilita operaciones complejas**: Permite almacenar y manipular datos durante la ejecución de funciones o procedimientos almacenados.
+- 🔄 **Reutilización de valores**: Reduce la necesidad de repetir expresiones complejas en una consulta.
+- 🔧 **Control de flujo en funciones y procedimientos**: Usar variables dentro de bloques `PL/pgSQL` para estructurar el flujo de operaciones.
+- 📚 **Mayor legibilidad y mantenimiento**: Hace el código más limpio y fácil de seguir.
+- ⚠️ **Evita errores de repetición**: Previene errores de lógica relacionados con la repetición de cálculos.
+- ⚡ **Optimización de subconsultas**: Almacena resultados intermedios en variables para optimizar consultas con subconsultas o cálculos complejos.
 
 ---
 
@@ -397,65 +396,70 @@ SET @VAR1=1,
 
 ---
 
-### Tipos de motores
+### Tipos de almacenamiento en PostgreSQL
 
-- 🛠️ InnoDB
-- 📦 MyISAM
-- 💾 MEMORY
-- 📄 CSV
-- 🗄️ ARCHIVE
-
----
-
-### 🚀 Comparación entre **InnoDB** y **MyISAM** en MySQL 🐬
-
-En este documento exploraremos las diferencias clave entre los motores de almacenamiento **InnoDB** y **MyISAM**, utilizados en MySQL para manejar bases de datos.
+- 🛠️ **PostgreSQL con MVCC**: Manejo avanzado de transacciones, alto rendimiento y concurrencia.
+- 📦 **TOAST**: Almacenamiento eficiente para grandes objetos, como texto y datos binarios.
+- 💾 **HASH**: Índice optimizado para búsquedas rápidas de igualdad.
+- 📄 **JSONB**: Almacenamiento eficiente y consultas de datos JSON con soporte completo de índices.
+- 🗄️ **BRIN**: Índices para datos con alta correlación, optimizando el espacio y el rendimiento en grandes conjuntos de datos.  
 
 ---
 
-### 📌 Introducción
+### 🚀 Características clave de PostgreSQL 🐘  
 
-MySQL es un sistema de gestión de bases de datos relacional que permite elegir entre diferentes motores de almacenamiento según las necesidades del proyecto. Dos de los más populares son:
+En este documento exploraremos las características principales de **PostgreSQL**, un sistema de gestión de bases de datos relacional que integra de forma nativa todas sus funcionalidades sin depender de motores de almacenamiento separados, a diferencia de MySQL.  
 
-- **InnoDB**: Ideal para transacciones y relaciones complejas.
-- **MyISAM**: Diseñado para consultas rápidas y tablas simples.
-
----
-
-### ⚙️ Características principales
-
-| Característica           | 🛠️ **InnoDB**                    | ⚡ **MyISAM**                   |
-|--------------------------|----------------------------------|---------------------------------|
-| **Soporte para transacciones** | ✅ Sí (ACID-compliant)         | ❌ No                           |
-| **Bloqueo de registros**     | ✅ Nivel de fila               | ❌ Nivel de tabla               |
-| **Velocidad de lectura**     | 🚀 Alta para datos complejos   | 🚀 Más rápida para tablas simples |
-| **Integridad referencial**   | ✅ Soporta claves foráneas     | ❌ No soporta                   |
-| **Consumo de memoria**       | 🧠 Mayor debido a funcionalidades | 🧠 Menor                       |
-| **Recuperación tras fallos** | ✅ Automática                  | ❌ Limitada                     |
+PostgreSQL se destaca por su soporte avanzado para transacciones, índices optimizados y almacenamiento eficiente de datos estructurados y semiestructurados.  
 
 ---
 
-### 📊 Comparación en profundidad
+### 📌 Introducción  
 
-#### 🌟 **Ventajas de InnoDB**
-1. 🔒 **Integridad de datos**: Manejo de claves foráneas y reglas de cascada.
-2. 📈 **Mejor rendimiento para transacciones**: Soporte completo de transacciones.
-3. 🛡️ **Recuperación confiable**: Protege contra fallos gracias a su sistema de logs.
+PostgreSQL es un sistema de gestión de bases de datos relacional avanzado, diseñado para ofrecer alto rendimiento, escalabilidad y cumplimiento con ACID. No utiliza motores de almacenamiento separados como MySQL, sino que incorpora todas sus funcionalidades de manera nativa.  
 
----
+Algunas de sus características clave incluyen:  
 
-#### ⚡ **Ventajas de MyISAM**
-1. 🚀 **Consultas rápidas**: Optimizado para operaciones de lectura.
-2. 📁 **Almacenamiento sencillo**: Menor consumo de disco y memoria.
-3. 🛠️ **Ideal para proyectos simples**: Perfecto para bases de datos pequeñas.
+- **MVCC (Multi-Version Concurrency Control)**: Manejo eficiente de transacciones sin bloqueos.  
+- **JSONB y XML**: Soporte para almacenamiento y consulta de datos semiestructurados.  
+- **Índices avanzados**: B-Tree, GIN, BRIN y Hash para optimización de consultas.  
 
 ---
 
-### 📂 Casos de uso
+### ⚙️ Características principales en PostgreSQL  
 
-| Proyecto                               | Recomendación              |
-|---------------------------------------|---------------------------|
-| 🛒 **Sistema de e-commerce**           | **InnoDB**: Soporte transaccional. |
-| 📚 **Sistema de biblioteca**           | **InnoDB**: Integridad referencial. |
-| 📊 **Generación de reportes simples**  | **MyISAM**: Consultas rápidas. |
-| 📄 **Blogs o sitios web estáticos**    | **MyISAM**: Almacenamiento eficiente. |
+| Característica               | 🐘 **PostgreSQL**               |
+|------------------------------|--------------------------------|
+| **Soporte para transacciones** | ✅ Sí (ACID-compliant, MVCC)  |
+| **Bloqueo de registros**       | ✅ Nivel de fila (MVCC)      |
+| **Velocidad de lectura**       | 🚀 Alta con índices avanzados (B-Tree, GIN, BRIN) |
+| **Integridad referencial**     | ✅ Soporte completo con claves foráneas |
+| **Consumo de memoria**         | 🧠 Optimizado con TOAST y compresión |
+| **Recuperación tras fallos**   | ✅ WAL (Write-Ahead Logging) para recuperación confiable |
+
+---
+
+### 📊 Comparación en profundidad  
+
+#### 🌟 **Ventajas de PostgreSQL en transacciones**  
+1. 🔒 **Integridad de datos**: Soporte completo para **claves foráneas**, reglas de **cascada** y **constraints avanzadas**.  
+2. 📈 **Alto rendimiento en transacciones**: Implementación de **MVCC** (Multi-Version Concurrency Control) para transacciones concurrentes sin bloqueos.  
+3. 🛡️ **Recuperación confiable**: Sistema de **WAL (Write-Ahead Logging)** para recuperación ante fallos y consistencia de datos.  
+
+---
+
+#### ⚡ **Ventajas de PostgreSQL para lectura intensiva**  
+1. 🚀 **Consultas optimizadas**: Uso de **índices avanzados** (B-Tree, GIN, BRIN) para acelerar lecturas.  
+2. 📁 **Almacenamiento eficiente**: Soporte para **TOAST** y **JSONB**, reduciendo el consumo de espacio.  
+3. 🛠️ **Ideal para analítica y reporting**: Soporte para **Materialized Views** y **paralelización de consultas**.  
+
+---
+
+### 📂 Casos de uso en PostgreSQL
+
+| Proyecto                               | Recomendación               |
+|---------------------------------------|----------------------------|
+| 🛒 **Sistema de e-commerce**           | **PostgreSQL con MVCC**: Soporte transaccional y concurrencia eficiente. |
+| 📚 **Sistema de biblioteca**           | **PostgreSQL con FK y índices**: Integridad referencial y optimización de consultas. |
+| 📊 **Generación de reportes simples**  | **Materialized Views o JSONB**: Almacenamiento eficiente y consultas rápidas. |
+| 📄 **Blogs o sitios web estáticos**    | **PostgreSQL con JSONB**: Manejo flexible de contenido y almacenamiento eficiente. |
