@@ -323,13 +323,17 @@ SELECT
 
 ---
 
-### Funciones Lógicas y Condicionales 🤔
+### Funciones Lógicas y Condicionales 🤔 1/2
 
 Las funciones lógicas y condicionales en SQL nos permiten realizar operaciones basadas en condiciones. Algunas de las más útiles en PostgreSQL son:
 
 - `CASE WHEN condition THEN value ELSE other_value END`: Evalúa una serie de condiciones y devuelve un valor correspondiente.
 - `COALESCE(value1, value2, ...)`: Devuelve el primer valor no nulo de la lista.
 - `NULLIF(value1, value2)`: Devuelve `NULL` si ambos valores son iguales; de lo contrario, devuelve `value1`.
+
+---
+
+### Funciones Lógicas y Condicionales 🤔 2/2
 
 Ejemplo:
 
@@ -360,7 +364,6 @@ SELECT
 ### Creando Variables con `WITH` en PostgreSQL 🤔
 
 - Las variables se pueden declarar temporalmente utilizando una **CTE (Common Table Expression)** con la cláusula `WITH`.
-- No es necesario el prefijo `@`, y las variables pueden usarse en la misma consulta.
 - Se pueden definir múltiples "variables" a la vez dentro de la misma cláusula `WITH`.
 
 Ejemplo:
@@ -376,12 +379,17 @@ SELECT * FROM var1, var2, var3, var4;
 
 ---
 
-### Utilidad de las variables en PostgreSQL 🤔  
+### Utilidad de las variables en PostgreSQL 🤔 1/2 
 
 - 🚀 **Mejora el rendimiento de las consultas**: Almacena resultados intermedios en variables para evitar cálculos repetidos.
 - 🧩 **Facilita operaciones complejas**: Permite almacenar y manipular datos durante la ejecución de funciones o procedimientos almacenados.
 - 🔄 **Reutilización de valores**: Reduce la necesidad de repetir expresiones complejas en una consulta.
 - 🔧 **Control de flujo en funciones y procedimientos**: Usar variables dentro de bloques `PL/pgSQL` para estructurar el flujo de operaciones.
+
+---
+
+### Utilidad de las variables en PostgreSQL 🤔 2/2
+
 - 📚 **Mayor legibilidad y mantenimiento**: Hace el código más limpio y fácil de seguir.
 - ⚠️ **Evita errores de repetición**: Previene errores de lógica relacionados con la repetición de cálculos.
 - ⚡ **Optimización de subconsultas**: Almacena resultados intermedios en variables para optimizar consultas con subconsultas o cálculos complejos.
@@ -405,14 +413,6 @@ SELECT * FROM var1, var2, var3, var4;
 ---
 
 ### 🚀 Características clave de PostgreSQL 🐘  
-
-En este documento exploraremos las características principales de **PostgreSQL**, un sistema de gestión de bases de datos relacional que integra de forma nativa todas sus funcionalidades sin depender de motores de almacenamiento separados, a diferencia de MySQL.  
-
-PostgreSQL se destaca por su soporte avanzado para transacciones, índices optimizados y almacenamiento eficiente de datos estructurados y semiestructurados.  
-
----
-
-### 📌 Introducción  
 
 PostgreSQL es un sistema de gestión de bases de datos relacional avanzado, diseñado para ofrecer alto rendimiento, escalabilidad y cumplimiento con ACID. No utiliza motores de almacenamiento separados como MySQL, sino que incorpora todas sus funcionalidades de manera nativa.  
 
