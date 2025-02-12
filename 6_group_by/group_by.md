@@ -1,13 +1,17 @@
-## Group By en PostgreSQL
+### Group By en PostgreSQL
 
 <img src="6_group_by/group_by.png" alt="todos los joins" style="height: 800px; margin: 0 auto 4rem auto; background: white; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+
+---
+
+### Group By en PostgreSQL
 
 - Sirve para agrupar datos que se repiten
 - Se usa en conjunto con funciones de agregación (Count(), Sum(), Avg()..)
 
 ---
 
-## ¿Cuándo Usarlo?
+### ¿Cuándo Usarlo?
 
 Cuando quieras agrupar datos similares y obtener resultados agregados por grupo, por ejemplo:
 
@@ -17,7 +21,7 @@ Cuando quieras agrupar datos similares y obtener resultados agregados por grupo,
 
 ---
 
-## Código Ejemplo
+### Código Ejemplo
 
 ```sql
 SELECT          columna1, 
@@ -37,7 +41,7 @@ GROUP BY        columna1, columna2;
 
 ---
 
-## Funciones de Agregación en PostgreSQL
+### Funciones de Agregación en PostgreSQL 1/3
 
 - **COUNT()** 📊: Cuenta el número de filas o valores no nulos.
 - **SUM()** ➕: Suma los valores de una columna numérica.
@@ -45,12 +49,22 @@ GROUP BY        columna1, columna2;
 - **MIN()** 🔽: Encuentra el valor mínimo en una columna.
 - **MAX()** 🔼: Encuentra el valor máximo en una columna.
 - **STRING_AGG()** 📝: Concatena los valores de una columna de tipo texto en un solo string.
+
+---
+
+### Funciones de Agregación en PostgreSQL 2/3
+
 - **ARRAY_AGG()** 🧳: Devuelve una matriz de todos los valores de una columna.
 - **BOOL_AND()** ✅: Devuelve verdadero si todas las expresiones de tipo booleano son verdaderas.
 - **BOOL_OR()** 🔘: Devuelve verdadero si alguna expresión de tipo booleano es verdadera.
 - **VAR_POP()** 📉: Calcula la varianza de una población.
 - **VAR_SAMP()** 📉🔬: Calcula la varianza de una muestra.
 - **STDDEV_POP()** 📐: Calcula la desviación estándar de una población.
+
+---
+
+### Funciones de Agregación en PostgreSQL 3/3
+
 - **STDDEV_SAMP()** 📏: Calcula la desviación estándar de una muestra.
 - **REGR_SLOPE()** ↗️: Calcula la pendiente de la recta de regresión.
 - **REGR_INTERCEPT()** ➖: Calcula la intersección de la recta de regresión.
