@@ -8,7 +8,7 @@
 
 Las **vistas** son tablas virtuales que permiten visualizar datos sin duplicarlos. Son muy útiles para consultas recurrentes, ya que simplifican la complejidad de las consultas al abstraer la lógica subyacente y permiten acceder a datos específicos de forma rápida y eficiente.
 
-<img src="8_herramientas_avanzadas/vistas_1.png" alt="vistas" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
+<img src="8_herramientas_avanzadas/vistas_0.png" alt="vistas" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
 
 
 ---
@@ -43,19 +43,19 @@ Los **procedimientos almacenados** en **PostgreSQL** permiten ejecutar un conjun
 
 Los **triggers** en **PostgreSQL** son acciones automáticas que se ejecutan cuando ocurre un evento específico en una tabla (como una inserción, actualización o eliminación). Los triggers permiten responder a cambios en los datos de manera eficiente, sin necesidad de intervención manual.
 
-<img src="8_herramientas_avanzadas/trigger.jpg" alt="trigger" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="8_herramientas_avanzadas/trigger_0.png" alt="trigger" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ===
 
 #### 📊 Entendiendo las Vistas
 
-<img src="8_herramientas_avanzadas/v_1.png" alt="vista 1"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="8_herramientas_avanzadas/vistas_1.png" alt="vista 1"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ---
 
 #### 📊 Partes de las Vistas
 
-<img src="8_herramientas_avanzadas/v_2.png" alt="vista 2"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="8_herramientas_avanzadas/vistas_2.png" alt="vista 2"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ---
 
@@ -76,13 +76,13 @@ CREATE VIEW lista AS
 
 #### 🛠️ Entendiendo las Funciones
 
-<img src="8_herramientas_avanzadas/f/f_1.png" alt="Funcion 1"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="8_herramientas_avanzadas/funcion_1.png" alt="Funcion 1"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ---
 
 #### 🛠️ Partes de las Funciones
 
-<img src="8_herramientas_avanzadas/f/f_2.png" alt="funcion 2"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="8_herramientas_avanzadas/funcion_2.png" alt="funcion 2"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ---
 
@@ -141,13 +141,13 @@ $$;
 
 #### 🌀 Entendiendo los Procedimientos
 
-<img src="8_herramientas_avanzadas/p/p_1.png" alt="procedimiento 1"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="8_herramientas_avanzadas/procedimiento_1.png" alt="procedimiento 1"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ---
 
 #### 🌀 Partes de los Procedimientos
 
-<img src="8_herramientas_avanzadas/p/p_2.png" alt="procedimiento 2"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="8_herramientas_avanzadas/procedimiento_2.png" alt="procedimiento 2"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ---
 
@@ -210,13 +210,13 @@ $$;
 
 #### 🔁 Entendiendo los Triggers o Disparadores
 
-<img src="8_herramientas_avanzadas/trigg/trigg_1.png" alt="procedimiento 1"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="8_herramientas_avanzadas/trigger_1.png" alt="procedimiento 1"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ---
 
 #### 🔁 Partes de los Trigger
 
-<img src="8_herramientas_avanzadas/trigg/trigg_2.png" alt="procedimiento 2"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="8_herramientas_avanzadas/trigger_2.png" alt="procedimiento 2"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ---
 
