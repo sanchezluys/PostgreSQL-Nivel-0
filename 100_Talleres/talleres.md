@@ -4,103 +4,53 @@
 
 ===
 
-#### 🌐 Interfaces para MySQL - Workbench
+#### 🌐 Interfaces para PostgreSQL - pgAdmin  
 
-<img src="100_Talleres/workbench_1.jpg" alt="workbench_1"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
+![pgAdmin](100_Talleres/pgadmin.png)
 
 ===
 
-#### 📊 Instalando Workbench
+#### 📊 Instalando pgAdmin
 
-<p class="fragment" data-fragment-index="1" style="text-align: left;">
-  1. <strong>💻 Descargar MySQL Workbench</strong>: Ve al sitio oficial de MySQL para <a href="https://dev.mysql.com/downloads/workbench/" target="_blank">descargar MySQL Workbench</a>. Asegúrate de seleccionar la versión compatible con tu sistema operativo (Windows, macOS, Linux).
-</p>
-<p class="fragment" data-fragment-index="2" style="text-align: left;">
-  2. <strong>📥 Instalar MySQL Workbench</strong>: Ejecuta el instalador descargado y sigue las instrucciones en pantalla. Acepta los términos y elige las opciones de instalación predeterminadas o personalizadas según tus necesidades.
-</p>
+1. **💻 Descargar pgAdmin**: Ve al sitio oficial de pgAdmin para [descargar pgAdmin](https://www.pgadmin.org/download/). Asegúrate de seleccionar la versión compatible con tu sistema operativo (Windows, macOS, Linux).
+
+2. **📥 Instalar pgAdmin**: Ejecuta el instalador descargado y sigue las instrucciones en pantalla. Acepta los términos y elige las opciones de instalación predeterminadas o personalizadas según tus necesidades.
 
 ---
 
 #### 📊 Sitio Oficial
 
-<img src="100_Talleres/sitio_oficial.png" alt="sitio oficial"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
+<img src="100_Talleres/postgresql.png" alt="sitio oficial"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
 
 ---
 
-#### 📊 Descargas
+#### 📊 Versiones de PostgreSQL
 
-<img src="100_Talleres/descarga.png" alt="sitio oficial"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
+PostgreSQL es un sistema de gestión de bases de datos completamente **gratuito y de código abierto**. No existen versiones comerciales o separadas, ya que todo el desarrollo es gestionado por la comunidad global de PostgreSQL.
 
----
+Puedes descargar la versión más reciente desde el sitio oficial:
 
-#### 📊 Versiones - Community
-
-<img src="100_Talleres/d_1.png" alt="sitio oficial"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
-
----
-
-#### 📊 Software Disponible - Community
-
-<img src="100_Talleres/d_2.png" alt="sitio oficial"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
-
----
-
-#### 📊 Versiones
-
-<img src="100_Talleres/d_3.png" alt="sitio oficial"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
-
----
-
-#### 📊 Link escondido
-
-<img src="100_Talleres/d_4.png" alt="sitio oficial"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
-
----
-
-#### 📊 Descargando...
-
-<img src="100_Talleres/d_5.png" alt="sitio oficial"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
+![Descargar PostgreSQL](100_Talleres/descarga_postgresql.png)
 
 ===
 
-#### 🔨 Configurando Workbench
+#### 🔨 Configurando pgAdmin
 
-<p class="fragment" data-fragment-index="1" style="text-align: left;">
-  1. <strong>🔧 Configurar MySQL Workbench</strong>: Una vez instalado, abre MySQL Workbench. En la pantalla principal, selecciona la opción para crear una nueva conexión con tu servidor MySQL.
-</p>
-<p class="fragment" data-fragment-index="2" style="text-align: left;">
-  2. <strong>🔑 Configurar la conexión con MySQL</strong>: Ingresa los datos de tu servidor MySQL (nombre de host, puerto, usuario y contraseña). Puedes probar la conexión para asegurarte de que todo esté configurado correctamente.
-</p>
-<p class="fragment" data-fragment-index="3" style="text-align: left;">
-  3. <strong>🖱️ Conectar y empezar a usar</strong>: Haz clic en "OK" para guardar la configuración de la conexión y luego en "Connect". Ahora puedes empezar a usar MySQL Workbench para gestionar tus bases de datos.
-</p>
+1. **🔧 Configurar pgAdmin**: Una vez instalado, abre **pgAdmin**. En la pantalla principal, selecciona la opción para agregar un nuevo servidor.
 
----
+2. **🔑 Configurar la conexión con PostgreSQL**: Ingresa los datos de tu servidor PostgreSQL, incluyendo el **nombre del servidor, dirección IP o hostname, puerto (por defecto 5432), usuario y contraseña**. Puedes probar la conexión antes de guardarla.
 
-#### 🔨 Vista
-
-<img src="100_Talleres/conf_1.png" alt="sitio oficial"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
-
----
-
-#### 🔨 Datos
-
-<img src="100_Talleres/conf_2.png" alt="sitio oficial"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;">
+3. **🖱️ Conectar y empezar a usar**: Haz clic en "Save" para guardar la configuración y luego selecciona el servidor para conectarte. Ahora puedes comenzar a usar **pgAdmin** para gestionar tus bases de datos PostgreSQL.
 
 ---
 
 #### 🔨 Credenciales
 
-<p class="fragment" data-fragment-index="1" style="text-align: left;">
-  1. <strong>🔑 Configurar la conexión con MySQL</strong>: Ingresa los datos de tu servidor MySQL.
-  <ul class="fragment" data-fragment-index="2">
-    <li><strong>Host:</strong> <code>tu-host.com / IP</code></li>
-    <li><strong>Puerto:</strong> <code>3306</code> (por defecto MySQL)</li>
-    <li><strong>Usuario:</strong> <code>tu_usuario</code></li>
-    <li><strong>Contraseña:</strong> <code>tu_clave_secreta</code></li>
-  </ul>
-  <hr>
-</p>
-  <p class="fragment" data-fragment-index="3" style="text-align: left;">
-  Puedes probar la conexión para asegurarte de que todo esté configurado correctamente.
-</p>
+1. **🔑 Configurar la conexión con PostgreSQL**: Ingresa los datos de tu servidor PostgreSQL.
+   - **Host:** `tu-host.com / IP`
+   - **Puerto:** `5432` (por defecto en PostgreSQL)
+   - **Usuario:** `tu_usuario`
+   - **Contraseña:** `tu_clave_secreta`
+   - **Base de datos:** `tu_base_de_datos`
+   
+Puedes probar la conexión para asegurarte de que todo esté configurado correctamente.
