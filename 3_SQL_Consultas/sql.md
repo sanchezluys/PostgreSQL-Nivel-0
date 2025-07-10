@@ -25,7 +25,7 @@
 ### SELECT 📚
 
 - **Título:** Navegando por tus Datos con `SELECT`
-- **Subtítulo:** La clave para recuperar información en MySQL 🗝️
+- **Subtítulo:** La clave para recuperar información en PostgreSQL 🗝️
 
 ---
 
@@ -121,7 +121,7 @@ SELECT * FROM productos WHERE categoria <> 'Electrónica';
 
 ---
 
-### FILTROS EN MYSQL - WHERE + >,< 🐶
+### FILTROS EN POSTGRESQL - WHERE + >,< 🐶
 
 - Mayor o menor que `>`, `<`, `<=`, `>=`
 - Filtra registros donde una columna tiene un valor mayor o menor que.
@@ -132,7 +132,7 @@ SELECT * FROM productos WHERE costo >= 15;
 
 ---
 
-### FILTROS EN MYSQL - WHERE + BETWEEN 🧲
+### FILTROS EN POSTGRESQL - WHERE + BETWEEN 🧲
 
 - Rango de valores
 - Filtra registros dentro de un rango definido
@@ -144,7 +144,7 @@ SELECT * FROM productos WHERE precio BETWEEN 50 AND 100;
 
 ---
 
-### FILTROS EN MYSQL - WHERE + IN 🚀
+### FILTROS EN POSTGRESQL - WHERE + IN 🚀
 
 - Lista de valores
 - Filtra registros dentro de un rango definido
@@ -156,7 +156,7 @@ SELECT * FROM productos WHERE categoria IN ('Electrónica', 'Ropa', 'Juguetes');
 
 ---
 
-### FILTROS EN MYSQL - WHERE + LIKE 🔑
+### FILTROS EN POSTGRESQL - WHERE + LIKE 🔑
 
 - Coincidencia de patrones
 - Filtra registros basándose en patrones.
@@ -184,7 +184,7 @@ SELECT * FROM productos WHERE nombre ILIKE 'Cam%';
 
 ---
 
-### FILTROS EN MYSQL - WHERE + IS NULL / IS NOT NULL 🤘
+### FILTROS EN POSTGRESQL - WHERE + IS NULL / IS NOT NULL 🤘
 
 - Valores nulos
 - `IS NULL`: Filtra registros con valores nulos.
