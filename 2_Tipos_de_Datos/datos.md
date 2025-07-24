@@ -61,3 +61,8 @@
     - Ejemplo: `BYTEA`  
     - **Uso**: Almacenar imágenes, archivos, documentos binarios.
 
+---
+
+### Dato vacío, con valor y nulo (NULL)
+
+<img src="3_SQL_Consultas/dato_null_1.png" alt="motores" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">

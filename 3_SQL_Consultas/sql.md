@@ -376,6 +376,52 @@ WITH
     var4 AS (SELECT '2024-05-12'::DATE)
 SELECT * FROM var1, var2, var3, var4;
 ```
+---
+
+### Creando Variables con `WITH` en Como Objetos 🤔
+
+Ejemplo:
+
+```sql
+-- ******************
+WITH 
+	var AS (SELECT 
+			'C%' 			AS 	patron,  	
+			2025 			AS 	año,
+			'2025-10-01'  	AS 	diaFeriado,
+			0.02			AS  interes,
+			'Juanito'		AS  cliente)
+-- *****************
+SELECT 	departamento,
+		año,
+		concat(var.cliente, ' vive en ', departamento, ' en el año ', var.año),
+		var.interes
+FROM 	departamentos, var
+WHERE	departamento LIKE var.patron
+```
+
+---
+
+### Creando Variables con `WITH` en Forma SIMPLE 🤔
+
+Ejemplo:
+
+```sql
+WITH variables AS (
+  SELECT
+    'C%' 			AS 	patron,  	
+	2025 			AS 	año,		
+	'2025-10-01'  	AS 	diaFeriado,
+	0.02			AS  interes,
+	'Juanito'		AS  cliente
+)
+SELECT 	departamento,
+		año,
+		concat(cliente, ' vive en ', departamento, ' en el año ', año),
+		interes
+FROM 	departamentos, variables
+WHERE	departamento LIKE patron
+```
 
 ---
 
@@ -393,12 +439,6 @@ SELECT * FROM var1, var2, var3, var4;
 - 📚 **Mayor legibilidad y mantenimiento**: Hace el código más limpio y fácil de seguir.
 - ⚠️ **Evita errores de repetición**: Previene errores de lógica relacionados con la repetición de cálculos.
 - ⚡ **Optimización de subconsultas**: Almacena resultados intermedios en variables para optimizar consultas con subconsultas o cálculos complejos.
-
----
-
-### Dato vacío, con valor y nulo (NULL)
-
-<img src="3_SQL_Consultas/dato_null_1.png" alt="motores" style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ===
 
