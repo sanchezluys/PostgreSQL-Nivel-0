@@ -376,6 +376,7 @@ WITH
     var4 AS (SELECT '2024-05-12'::DATE)
 SELECT * FROM var1, var2, var3, var4;
 ```
+
 ---
 
 ### Creando Variables con `WITH` en Como Objetos 🤔
